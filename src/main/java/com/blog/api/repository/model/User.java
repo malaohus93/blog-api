@@ -30,6 +30,10 @@ public class User implements UserDetails {
         return password;
     }
 
+    public void setPassword(String password){
+        this.password = password;
+    }
+
     @Override
     public String getUsername(){
         return username;

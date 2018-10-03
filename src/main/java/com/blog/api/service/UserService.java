@@ -2,15 +2,16 @@ package com.blog.api.service;
 
 import com.blog.api.repository.UserRepository;
 import com.blog.api.repository.model.User;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.stereotype.Repository;
 
-import javax.annotation.Resource;
-
+@Repository("userService")
 public class UserService implements UserDetailsService {
 
-    @Resource
+    @Autowired
     private UserRepository userRepository;
 
     @Override
